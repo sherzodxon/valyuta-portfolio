@@ -1,0 +1,691 @@
+:root {
+    --dark-theme: #000;
+    --light-theme: #fff;
+   --dark-child:rgb(104, 92, 92);
+   --light-child:rgb(234, 221, 221);
+}
+
+.dark {
+    --dark-theme: white;
+    --light-theme: black;
+    --dark-child:rgb(234, 221, 221);
+    --light-child:rgb(104, 92, 92);
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+        url('../fonts/montserrat-v24-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v24-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/montserrat-v24-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v24-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-500 - latin */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/montserrat-v24-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/montserrat-v24-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* titillium-web-300 - latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+        url('../fonts/titillium-web-v15-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/titillium-web-v15-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* titillium-web-regular - latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/titillium-web-v15-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/titillium-web-v15-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* titillium-web-600 - latin */
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/titillium-web-v15-latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/titillium-web-v15-latin-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-200italic - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 200;
+    src: local(''),
+        url('../fonts/poppins-v20-latin-200italic.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-200italic.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-300 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+        url('../fonts/poppins-v20-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-300italic - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: italic;
+    font-weight: 300;
+    src: local(''),
+        url('../fonts/poppins-v20-latin-300italic.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-300italic.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-regular - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/poppins-v20-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-500 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/poppins-v20-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poppins-600 - latin */
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/poppins-v20-latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/poppins-v20-latin-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+td {
+    display: block;
+    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table {
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+.money-tr {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.money-trh {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding: 0;
+}
+
+.money-tr:nth-child(1) {
+    margin-top: 100px;
+}
+
+.thead-tr-light {
+    position: fixed;
+    background-color: var(--light-theme);
+    z-index: 99;
+    top: 60px;
+    padding-top: 20px;
+    max-width:996px ;
+}
+
+.moneys-body {
+    margin-top: 250px;
+}
+
+.money-tr:nth-child(2n) {
+    background-color: var(--light-child);
+}
+
+.container {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.money-table {
+    width: 100%;
+    font-family: Poppins;
+    position: relative;
+}
+
+.money-thead {
+    width: 100%;
+
+}
+
+.thead-tr-light {
+    border-bottom: 2px solid var(--dark-theme);
+    background-color: var(--light-theme);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+}
+
+.thead-tr-dark {
+    border-bottom: 2px solid var(--light-theme);
+    background-color: var(--dark-theme);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+}
+
+.date-unit {
+    padding-right: 130px;
+}
+
+.money-diff {
+    padding-right: 25px;
+}
+
+.money-course {
+    padding-left: 80px;
+}
+
+.money-name {
+    padding-left: 15px;
+}
+
+.money-names {
+    padding: 0;
+    width: 250px;
+    padding-left: 15px;
+}
+
+.money-inf {
+    display: block;
+    padding: 3px 10px;
+    padding-right: 10px;
+    background-color: rgba(246, 64, 64, 0.9);
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    font-size: 16px;
+    
+    max-width: 70px;
+}
+
+.money-inf::before {
+    position: absolute;
+    top: 15%;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    content: "";
+    background: url(../img/arrow-down.svg) no-repeat center center;
+}
+
+.money-dinf {
+    display: block;
+    padding: 3px 10px;
+    padding-right: 10px;
+    background-color: rgba(58, 199, 70);
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    font-size: 16px;
+   max-width: 70px;
+}
+
+.money-dinf::before {
+    position: absolute;
+    top: 15%;
+    right: 5px;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background: url(../img/arrow-down.svg) no-repeat center center;
+    transform: rotateX(180deg)
+}
+
+.search {
+    position: fixed;
+    display: block;
+    width: 100%;
+    background-color: var(--light-theme);
+    z-index: 30;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    top: 0;
+}
+
+.search-form {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid rgb(62, 59, 59);
+    padding: 3px;
+    border-radius: 20px;
+    background-color: var(--light-theme);
+
+}
+
+.search-input {
+    width: calc(100% - 60px);
+    font-size: 16px;
+    font-family: montserrat;
+    padding: 3px 6px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--light-theme);
+    color: var(--dark-theme);
+
+}
+
+.search-input::placeholder {
+    font-size: 16px;
+    font-family: Montserrat;
+    color: var(--dark-theme);
+}
+
+.search-input:focus {
+
+    outline: none;
+}
+
+.search-button--dark {
+    position: relative;
+    width: 35px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 3px 6px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-button--dark::before {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    content: '';
+    background: url(../img/search-six.svg) no-repeat center center;
+    top: 2px;
+    right: 0;
+}
+.search-button--light {
+    position: relative;
+    width: 35px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    padding: 3px 6px;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.search-button--light::before {
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    content: '';
+    background: url(../img/search-three.svg) no-repeat center center;
+    top: 2px;
+    right: 0;
+}
+
+
+
+body {
+    background-color: var(--light-theme);
+    color: var(--dark-theme);
+}
+
+
+
+.switch-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+.switch {
+    width: 50px;
+    height: 24px;
+    background-color: var(--dark-theme);
+    box-shadow: var(--light-shadow);
+    border-radius: 50px;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--light-theme);
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+
+.switch.turn-on1 {
+    box-shadow: var(--dark-shadow);
+    background-color: var(--dark-theme);
+}
+
+.circle.turn-on2 {
+    transform: translateX(120%);
+    background-color: var(--light-theme);
+    top: 1%;
+    left: -6%;
+    width: 24px;
+    height: 24px;
+}
+@media only screen and (max-width:1050px){
+    .container{
+        max-width: 900px;
+    }
+    .thead-tr-light {
+        max-width: 896px;
+    }
+}
+@media only screen and (max-width:950px){
+    .container{
+        max-width: 800px;
+    }
+    .thead-tr-light {
+        max-width: 796px;
+    }
+    .money-tr{
+        max-width: 796px;
+    }
+    .date-unit{
+        padding-right: 100px;
+    }
+}
+@media only screen and (max-width:850px){
+    .container{
+        max-width: 700px;
+    }
+    .thead-tr-light {
+        max-width: 696px;
+        font-size: 16px;
+    }
+    .money-tr{
+        max-width: 696px;
+        font-size: 16px;
+    }
+    .money-course{
+        padding-left: 80px;
+    }
+    .money-inf{
+        font-size: 14px;
+        padding-left: 5px;
+    }
+    .money-dinf{
+        font-size: 14px;
+        padding-left: 10px;
+        padding-right: 5px;
+    }
+    .date-unit{
+        padding-right: 100px;
+    }
+}
+@media only screen and (max-width:700px){
+    .container{
+        max-width: 600px;
+    }
+    .thead-tr-light {
+        max-width: 596px;
+    }
+    .money-tr{
+        max-width: 596px;
+        font-size: 14px;
+    }
+    .date-unit{
+        padding-right: 70px;
+    }
+    .money-course{
+        padding-left: 60px;
+    }
+}
+@media only screen and (max-width:600px){
+    .container{
+        max-width: 500px;
+    }
+    .thead-tr-light {
+        max-width: 496px;
+    }
+    .money-tr{
+        max-width: 496px;
+        font-size: 13px;
+    }
+    .money-inf{
+        width: 75px;
+        font-size: 12px;
+        padding-right: 0px;
+     
+    }
+    .money-inf::before{
+        top: 2px;
+    }
+    .money-dinf{
+       max-width: 75px;
+        font-size: 12px;
+        padding-right: 0px;
+        padding-left: 5px;
+    }
+    .money-dinf::before{
+        top: 1px;
+        left: 46px;
+    }
+    .search-form{
+        margin-left: 0;
+    }
+    .money-date{
+        margin-right: 15px;
+        width: 60px;
+    }
+    .money-score{
+        width: 75px;
+        margin-right: 40px;
+    }
+    .money-courses{
+        width: 80px;
+        font-size: 12px;
+        margin-right: 40px;
+    }
+    .money-names{
+        width: 150px;
+        padding-left: 10px;
+    }
+    .date-unit{
+        padding-right: 20px;
+    }
+    .search-form{
+        width: 350px;
+    }
+    .money-course{
+        padding-left: 60px;
+    }
+}
+@media only screen and (max-width:500px){
+    .container{
+        max-width: 450px;
+    }
+    .thead-tr-light {
+        max-width: 446px;
+    }
+    .money-tr{
+        max-width: 446px;
+        font-size: 13px;
+    }
+    .money-course{
+        padding-left: 70px;
+    }
+    .money-courses{
+        margin-right: 20px;
+    }
+    .money-score{
+        margin-right: 20px  ;
+    }
+}
+@media only screen and (max-width:450px){
+    .container{
+        max-width: 400px;
+    }
+    .thead-tr-light {
+        max-width: 396px;
+        font-size: 13px;
+    }
+    .money-tr{
+        max-width: 396px;
+        font-size: 13px;
+    }
+    .money-course{
+        padding-left: 70px;
+    }
+    .money-courses{
+        margin-right: 20px;
+    }
+    .money-score{
+        margin-right: 20px  ;
+    }
+    .money-dinf{
+      text-align: center;
+        width: 40px;  
+        padding: 3px;  
+        padding-bottom: 2px;
+        
+    }
+    .money-inf{
+        width: 40px;
+        text-align: center;
+        padding: 3px;
+        padding-bottom: 2px;
+    }
+    .money-inf::before{
+        display: none;
+    }
+    .money-score{
+        width: 30px;
+    }
+    .money-dinf::before{
+        display: none;
+    }
+    .search-form{
+        width: 300px;
+    }
+    .money-diff{
+        padding-left: 20px;
+    }
+    .money-course{
+        padding-left: 110px;
+    }
+    
+}
+@media only screen and (max-width:400px){
+    .container{
+        max-width: 350px;
+    }
+    .thead-tr-light {
+        max-width: 346px;
+        font-size: 12px;
+    }
+    .money-tr{
+        max-width: 346px;
+        font-size: 11px;
+    }
+    .money-course{
+        padding-left: 70px;
+    }
+    .money-diff{
+        padding-left: 5px;
+        padding-right: 10px;
+    }
+    .date-unit{
+        padding-right: 25px;
+    }
+    .money-score{
+        margin-right: 25px;
+    }
+    .money-courses{
+        width: 60px;
+        margin-right: 22px;
+    }
+    .search-form{
+        width: 250px;
+    }
+}

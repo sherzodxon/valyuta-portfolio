@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    
+    <section class="search">
+        <div class="container">
+            <div class="switch-wrapper">
+                <div class="switch">
+                    <div class="circle">
+                    </div>
+                </div>
+            </div>
+            <form class="search-form">
+                <label class="search-label">
+                    <input type="text" id="search" placeholder="Qidirish" class="search-input">
+                </label>
+                <button class="search-button--light" type="submit"></button>
+            </form>
+        </div>
+    </section>
+    <section class="table">
+        <div class="container">
+            <table id="" class="money-table">
+                <thead class="money-thead">
+                    <tr class="thead-tr-light money-trh">
+                        <th class="money-name">Nomi</th>
+                        <th class="money-course">Kurs<span class="course-span">(so'm)</span></th>
+                        <th class="money-diff">O'zgarishi</th>
+                        <th class="date-unit">Sana</th>
+                    </tr>
+                </thead>
+                <tbody class="moneys-body" id="moneys-table-body">
+
+                </tbody>
+            </table>
+            <!-- <form>
+                <p>This demo of CORS Anywhere should only be used for development purposes, see <a
+                        href="https://github.com/Rob--W/cors-anywhere/issues/301">https://github.com/Rob--W/cors-anywhere/issues/301</a>
+                </p>
+                <p>To temporarily unlock access to the demo, click on the following button: <input type="submit"
+                        value="Request temporary access to the demo server"><input type="hidden" name="accessRequest"
+                        value="fa72dcc8c8753e3f29ab5ac77e98efa51a8663afee0524599062cd4cf9283881">
+                </p>
+            </form> -->
+
+
+    </section>
+    <template id="money-template">
+        <tr class="money-tr">
+            <td class="money-names"></td>
+            <td class="money-courses"></td>
+            <td class="money-score"><span id="money-score-span"></span></td>
+            <td class="money-date"></td>
+        </tr>
+    </template>
+
+    <script src="js/data.js">
+    </script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
