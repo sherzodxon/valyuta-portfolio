@@ -1,19 +1,22 @@
+let useMoney = [];
+
 const body = document.querySelector('body');
 const switchWrapper = document.querySelector('.switch-wrapper');
 const switchBody = document.querySelector('.switch');
 const circle = document.querySelector('.circle');
-const button=document.querySelector('.search-button--light')
+const button = document.querySelector('.search-button--light')
 switchWrapper.addEventListener('click', switchLight);
 
 function switchLight() {
-  circle.classList.toggle("turn-on2");
-  switchBody.classList.toggle("turn-on1");
-  body.classList.toggle("dark");
-  
+    circle.classList.toggle("turn-on2");
+    switchBody.classList.toggle("turn-on1");
+    body.classList.toggle("dark");
+
 }
 
 const moneyTemplate = document.querySelector("#money-template");
 const moneytableBody = document.querySelector("#moneys-table-body");
+const searchForm = document.querySelector(".search-form");
 
 const renderMoney = (moneys) => {
     const {
@@ -49,44 +52,45 @@ const renderMoney = (moneys) => {
 
 }
 
-// fetch(`https://cors-anywhere.herokuapp.com/cbu.uz/oz/arkhiv-kursov-valyut/json/`, {})
-//     .then((response) => {
-//         return response.json()
-//     })
-//     .then((data) => {
-//         console.log(data);
-//         const renderMoneys=()=>{
-//             moneytableBody.innerHTML="";
-//             data.forEach(moneys => {
-//                 const moneyRow=renderMoney(moneys);
-//                 moneytableBody.append(moneyRow);
-//             });
-//         }
-//         renderMoneys();
-//     })
+fetch(`https://cors-anywhere.herokuapp.com/cbu.uz/oz/arkhiv-kursov-valyut/json/`, {})
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        useMoney = data;
 
-const renderMoneys = (money = moneys) => {
-    moneytableBody.innerHTML = "";
-    money.forEach(moneys => {
-        const moneyRow = renderMoney(moneys);
-        moneytableBody.append(moneyRow);
-    });
-}
-renderMoneys();
-let showMoney = moneys.slice();
-const searchForm = document.querySelector(".search-form");
+        const renderMoneys = (money=useMoney) => {
+            moneytableBody.innerHTML = "";
+            money.forEach(moneys => {
+                const moneyRow = renderMoney(moneys);
+                moneytableBody.append(moneyRow);
+            });
+        }
+        renderMoneys();
+        let showMoney = useMoney.slice();
+       
+        searchForm.addEventListener("submit", function (evt) {
+            evt.preventDefault();
+            const elements = evt.target.elements;
+            const searchValue = elements.search.value;
 
-searchForm.addEventListener("submit", function (evt) {
-    evt.preventDefault();
-    const elements = evt.target.elements;
-    const searchValue = elements.search.value;
+            showMoney = useMoney.filter(moneys => {
+                const searchRegExp = new RegExp(searchValue, "gi");
+                const moneyName = `${moneys.CcyNm_UZ}`;
+                return moneyName.match(searchRegExp)
+            })
 
-    showMoney = moneys.filter(moneys => {
-        const searchRegExp = new RegExp(searchValue, "gi");
-        const moneyName = `${moneys.CcyNm_UZ}`;
-        return moneyName.match(searchRegExp)
+            renderMoneys(showMoney);
+
+        })
+
     })
 
-    renderMoneys(showMoney);
-
-})
+// const renderMoneys = (money = moneys) => {
+//     moneytableBody.innerHTML = "";
+//     money.forEach(moneys => {
+//         const moneyRow = renderMoney(moneys);
+//         moneytableBody.append(moneyRow);
+//     });
+// }
+// renderMoneys();
