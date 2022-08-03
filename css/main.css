@@ -186,16 +186,17 @@ td {
     border-radius: 5px;
     padding-top: 20px;
     padding: 0;
+    margin-top: 10px;
 }
 
 .money-tr:nth-child(1) {
-    margin-top: 100px;
+    margin-top: 110px;
 }
 
 .thead-tr-light {
     position: fixed;
     background-color: var(--light-theme);
-    z-index: 99;
+    z-index: 29;
     top: 60px;
     padding-top: 20px;
     max-width:996px ;
@@ -264,7 +265,14 @@ td {
     width: 250px;
     padding-left: 15px;
 }
-
+.money-courses{
+    width: 100px;
+    margin-right: 100px;
+}
+.money-score{
+    
+    margin-right: 20px;
+}
 .money-inf {
     display: block;
     padding: 3px 10px;
@@ -274,7 +282,7 @@ td {
     border-radius: 20px;
     position: relative;
     font-size: 16px;
-    
+    margin-right: 40px;
     max-width: 70px;
 }
 
@@ -287,6 +295,10 @@ td {
     content: "";
     background: url(../img/arrow-down.svg) no-repeat center center;
 }
+.money-date{
+    width: 100px;
+    margin-right: 65px;
+}
 
 .money-dinf {
     display: block;
@@ -298,6 +310,7 @@ td {
     position: relative;
     font-size: 16px;
    max-width: 70px;
+   margin-right: 20px;
 }
 
 .money-dinf::before {
@@ -316,7 +329,7 @@ td {
     display: block;
     width: 100%;
     background-color: var(--light-theme);
-    z-index: 30;
+    z-index: 20;
     padding-top: 20px;
     padding-bottom: 30px;
     top: 0;
@@ -355,7 +368,6 @@ td {
 }
 
 .search-input:focus {
-
     outline: none;
 }
 
@@ -407,9 +419,15 @@ td {
 body {
     background-color: var(--light-theme);
     color: var(--dark-theme);
+    position: relative;
 }
-
-
+.body-hidden{
+    overflow: hidden;
+    position: relative;
+}
+.body-auto{
+    overflow: auto;
+}
 
 .switch-wrapper {
     position: absolute;
@@ -453,6 +471,160 @@ body {
     width: 24px;
     height: 24px;
 }
+.modal{
+    display: none;
+    position: absolute;
+    width:100%;
+    height: calc(100% + 100vh);
+    background-color: rgba(40, 31, 31, 0.8);
+    top: 0;
+    bottom: 0;
+    z-index: 30;
+}
+.modal--opened{
+    display: block;
+}
+.hamburger-button{
+    cursor: pointer;
+    padding: 16px 16px;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    background-color: transparent;
+    position: absolute;
+}
+.hamburger-button::after{
+    width: 32px;
+    height: 32px;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    background: url(../img/hamburger-dollar.svg);
+}
+
+.modal-wrapper{   
+    background-color: var(--light-theme);
+    width: 300px;
+     font-family: montserrat;
+     position: fixed;
+     top: calc(50% - 160px);
+     left: calc(50% - 150px);
+     border-radius: 20px;
+     padding: 30px 20px;
+     padding-bottom: 0;
+}
+.sort-select{
+    width: 250px;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.modal-search-form{
+    border: 1px solid var(--dark-theme);
+    border-radius: 10px;
+    padding: 15px;
+}
+.sort-form-title{
+    margin-top: 0px;
+}
+option:focus{
+    font-size: 14px;
+}
+input:focus{
+    outline: none;
+}
+.day-input, .month-input, .year-input {
+    width: 125px;
+    border-radius: 5px;
+    border:  1px solid rgba(70, 65, 65,0.5);
+    padding: 5px;
+    
+}
+.day-input{
+    color: yellowgreen;
+    margin-right: 15px;
+    font-family: montserrat;
+    background-color: var(--light-theme);
+    cursor: pointer;
+}
+.code-input::placeholder{
+    color: yellowgreen;
+}
+.code-input{
+    text-transform: uppercase;
+    width: 45px;
+    border-radius: 5px;
+    border:  1px solid rgba(70, 65, 65,0.5);
+    padding: 5px;
+    color: yellowgreen;
+    margin-right: 15px;
+    background-color: var(--light-theme);
+    font-family: montserrat;
+}
+.radio-label{
+    width: 260px;
+    position: relative;
+    font-size: 14px;
+    font-family: montserrat;
+    display: block;
+    cursor: pointer;
+
+}
+.radio-input{
+    display: none;
+}
+.radio-label::after{
+    width: 15px;
+    height: 15px;
+    content: '';
+    position: absolute;
+    background: url(../img/ok.svg);
+    right: 0;
+    top: 0;
+    display: none;
+}
+.radio-input:checked + .radio-label{
+    color: yellowgreen;
+}
+.radio-input:checked + .radio-label::after{
+   display: block;
+}
+.modal-history-form{
+  
+    margin-left: auto;
+   
+    margin-top: 20px;
+    
+}
+.history-button{
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border:  1px solid transparent;
+    border-radius: 5px;
+    background-color:var(--dark-theme);
+    color: var(--light-theme);
+    font-family: montserrat;
+}
+.history-button:hover{
+    border: 1px solid var(--light-theme);
+}
+.date-wrapper{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.date-text{
+    font-size: 14px;
+    margin-bottom: 0;
+    margin-left: auto;
+    padding-bottom: 20px;
+    color: yellowgreen;
+
+}
 @media only screen and (max-width:1050px){
     .container{
         max-width: 900px;
@@ -474,6 +646,15 @@ body {
     .date-unit{
         padding-right: 100px;
     }
+    .money-courses{
+        margin-right: 80px;
+    }
+    .money-score{
+        margin-right: 0px;
+    }
+    .money-date{
+        margin-right: 40px;
+    }
 }
 @media only screen and (max-width:850px){
     .container{
@@ -491,16 +672,22 @@ body {
         padding-left: 80px;
     }
     .money-inf{
-        font-size: 14px;
-        padding-left: 5px;
+        font-size: 13px;
+        padding-left: 10px;
     }
     .money-dinf{
-        font-size: 14px;
+        font-size: 13px;
         padding-left: 10px;
         padding-right: 5px;
     }
     .date-unit{
         padding-right: 100px;
+    }
+    .money-score{
+        margin-right: 5px;
+    }
+    .money-courses{
+        margin-right: 60px;
     }
 }
 @media only screen and (max-width:700px){
@@ -520,6 +707,9 @@ body {
     .money-course{
         padding-left: 60px;
     }
+    .money-date{
+        margin-right: 20px;
+    }
 }
 @media only screen and (max-width:600px){
     .container{
@@ -536,7 +726,9 @@ body {
         width: 75px;
         font-size: 12px;
         padding-right: 0px;
-     
+    }
+    .modal-wrapper{
+        left: calc(50% - 170px);
     }
     .money-inf::before{
         top: 2px;
@@ -552,7 +744,8 @@ body {
         left: 46px;
     }
     .search-form{
-        margin-left: 0;
+       width: 300px;
+       margin-right: 90px;
     }
     .money-date{
         margin-right: 15px;
@@ -580,6 +773,17 @@ body {
     .money-course{
         padding-left: 60px;
     }
+    .money-date{
+        width: 50px;
+        margin-right: 0;
+        margin-left: 25px;
+    }
+    .money-courses{
+        margin-right: 0px;
+    }
+    .money-score{
+        margin-right: 10px;
+    }
 }
 @media only screen and (max-width:500px){
     .container{
@@ -596,10 +800,14 @@ body {
         padding-left: 70px;
     }
     .money-courses{
-        margin-right: 20px;
+        margin-right: 0px;
     }
     .money-score{
-        margin-right: 20px  ;
+        margin-right: 0px  ;
+    }
+    .search-form{
+        width: 280px;
+        margin-right: 100px;
     }
 }
 @media only screen and (max-width:450px){
@@ -618,10 +826,10 @@ body {
         padding-left: 70px;
     }
     .money-courses{
-        margin-right: 20px;
+        margin-right: 0px;
     }
     .money-score{
-        margin-right: 20px  ;
+        margin-right: 0px  ;
     }
     .money-dinf{
       text-align: center;
@@ -646,19 +854,40 @@ body {
         display: none;
     }
     .search-form{
-        width: 300px;
+        width: 250px;
+        margin-right: 90px;
     }
     .money-diff{
         padding-left: 20px;
+       
     }
     .money-course{
         padding-left: 110px;
+    }
+    .money-date{
+        width: 40px;
+        margin-left: 35px;
+    }
+    .modal-wrapper{
+        width: 260px;
+        left: calc(50% - 150px);
+        top: calc(50% - 200px);
+    }
+    .radio-label{
+        width: 220px;
+    }
+    .day-input{
+        margin-right: 0;
+    }
+    .code-input{
+        margin-right: 0;
     }
     
 }
 @media only screen and (max-width:400px){
     .container{
         max-width: 350px;
+       
     }
     .thead-tr-light {
         max-width: 346px;
@@ -686,6 +915,15 @@ body {
         margin-right: 22px;
     }
     .search-form{
-        width: 250px;
+        width: 205px;
     }
 }
+
+.navigation{
+    z-index: 99;
+    margin-top: 300px;
+   }
+   header{
+       z-index: 99;
+       margin-top: 400px;
+   }

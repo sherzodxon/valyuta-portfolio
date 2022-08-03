@@ -10,9 +10,10 @@
 </head>
 
 <body>
-    
     <section class="search">
+
         <div class="container">
+            <button class="hamburger-button"></button>
             <div class="switch-wrapper">
                 <div class="switch">
                     <div class="circle">
@@ -21,13 +22,15 @@
             </div>
             <form class="search-form">
                 <label class="search-label">
-                    <input type="text" id="search" placeholder="Qidirish" class="search-input">
+                    <input type="text" id="search" placeholder="Nomi" class="search-input">
                 </label>
                 <button class="search-button--light" type="submit"></button>
             </form>
         </div>
+      
     </section>
-    <section class="table">
+    
+    <section class="table scrollify">
         <div class="container">
             <table id="" class="money-table">
                 <thead class="money-thead">
@@ -35,27 +38,51 @@
                         <th class="money-name">Nomi</th>
                         <th class="money-course">Kurs<span class="course-span">(so'm)</span></th>
                         <th class="money-diff">O'zgarishi</th>
-                        <th class="date-unit">Sana</th>
+                        <th class="date-unit">Kod</th>
                     </tr>
                 </thead>
                 <tbody class="moneys-body" id="moneys-table-body">
 
                 </tbody>
             </table>
-            <!-- <form>
-                <p>This demo of CORS Anywhere should only be used for development purposes, see <a
-                        href="https://github.com/Rob--W/cors-anywhere/issues/301">https://github.com/Rob--W/cors-anywhere/issues/301</a>
-                </p>
-                <p>To temporarily unlock access to the demo, click on the following button: <input type="submit"
-                        value="Request temporary access to the demo server"><input type="hidden" name="accessRequest"
-                        value="fa72dcc8c8753e3f29ab5ac77e98efa51a8663afee0524599062cd4cf9283881">
-                </p>
-            </form> -->
-
 
     </section>
-    <template id="money-template">
-        <tr class="money-tr">
+    <div class="modal" id="modal">
+
+        <div class="modal-wrapper">
+            <form id="modal-form" class="modal-search-form">
+                <h4 class="sort-form-title">Tartiblash</h4>
+               
+                <input  class="radio-input" value="1" type="radio" id="expensive" name="radio" >
+                <label for="expensive" class="radio-label expensive lebel-expensive">Eng qimmat valyuta kursi bo'yicha</label><br>
+
+                <input class="radio-input" value="2"  id="unexpensive" name="radio" type="radio">
+                <label for="unexpensive" class="radio-label unexpensive">Eng arzon valyuta kursi bo'yicha
+                </label><br>
+
+                <input class="radio-input" value="3" name="radio" id="radio-a" type="radio">
+                <label for="radio-a" class="radio-label label-a-z">A-Z bo'yicha</label><br>
+
+                <input class="radio-input" value="4" name="radio" id="radio-z" type="radio">
+                <label for="radio-z" class="radio-label label-z-a">Z-A bo'yicha</label>
+            </form>
+            
+            <form class="modal-history-form" id="history-form">
+                <h4 class="history-form-title">Eski sanadagi kursni bilish</h4>
+                <label for="search" class="search-label"></label>
+                <input type="date" id="date" required placeholder="Kun" class="day-input">
+                <input type="text" maxlength="3" id="code" placeholder="Kod" required class="code-input">
+                <button class="history-button">Ok</button>
+            </form>
+            <div class="date-wrapper">
+                <p class="date-text"></p>
+            </div>
+
+        </div>
+
+    </div>
+    <template id="normal-scroll-items">
+        <tr class="normal-scroll-item money-tr" id="n-item-1">
             <td class="money-names"></td>
             <td class="money-courses"></td>
             <td class="money-score"><span id="money-score-span"></span></td>
@@ -63,8 +90,10 @@
         </tr>
     </template>
 
-    <script src="js/data.js">
-    </script>
+
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js"></script> -->
+    <script src="js/data.js"></script>
     <script src="js/main.js"></script>
 </body>
 
